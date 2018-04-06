@@ -45,23 +45,9 @@
                             <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                 <ul class="navbar-nav animated" id="nav">
                                     <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="moshDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                        <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Home</a>
-                                            <a class="dropdown-item" href="about.html">About Us</a>
-                                            <a class="dropdown-item" href="services.html">Services</a>
-                                            <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-                                            <a class="dropdown-item" href="blog.html">Blog</a>
-                                            <a class="dropdown-item" href="contact.html">Contact</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="elements.html">Elements</a>
-                                        </div>
-                                    </li>
+                                    
                                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                                 </ul>
                                 <!-- Search Form Area Start -->
@@ -117,18 +103,18 @@
                 <div class="col-12 col-md-8">
                     <div class="login-form-area">
                         <h2>Enter login details</h2>
-                        <form action="#">
+                        <form action="test.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <input type="text" class="form-control" id="name" placeholder="E-mail">
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="E-mail">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                 </div>
                                 
                                 
                                 <button class="btn mosh-btn mt-50" type="submit">Login</button> &nbsp;
-                                 <a href="forgot.html"><button class="btn mosh-btn mt-50" type="submit">Forgot Password</button></a>
+                                 <a href="forgot.html"><button class="btn mosh-btn mt-50" type="submit" name="login_user">Forgot Password</button></a>
                                
                             </div>
                         </form>
@@ -154,12 +140,13 @@
                 <div class="row">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-100">
-                            <a href="#" class="mb-50 d-block"><img src="img/core-img/logo.png" alt=""></a>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellent esque sit amet tellus blandit. Etiam nec odio vestibul.</p>
+                            <a href="#" class="mb-50 d-block"><img src="" alt=""></a>
+                            
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-100">
+                            <p>Coming Soon</p>
                             <h5>Fast links</h5>
                             <ul>
                                 <li><a href="#">Home</a></li>

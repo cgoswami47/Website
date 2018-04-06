@@ -45,23 +45,9 @@
                             <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                 <ul class="navbar-nav animated" id="nav">
                                     <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="moshDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                        <div class="dropdown-menu" aria-labelledby="moshDropdown">
-                                            <a class="dropdown-item" href="index.html">Home</a>
-                                            <a class="dropdown-item" href="about.html">About Us</a>
-                                            <a class="dropdown-item" href="services.html">Services</a>
-                                            <a class="dropdown-item" href="portfolio.html">Portfolio</a>
-                                            <a class="dropdown-item" href="blog.html">Blog</a>
-                                            <a class="dropdown-item" href="contact.html">Contact</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="elements.html">Elements</a>
-                                        </div>
-                                    </li>
+                                    
                                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    
                                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                                 </ul>
                                 <!-- Search Form Area Start -->
@@ -117,25 +103,25 @@
                 <div class="col-12 col-md-8">
                     <div class="login-form-area">
                         <h2>Enter Registration details</h2>
-                        <form action="#">
+                        <form action="test.php" method="post">
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                    <input type="text" class="form-control" name="username" placeholder="Name">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    <input type="email" class="form-control" name="email" placeholder="E-mail">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="phone" class="form-control" id="phone" placeholder="Mobile No.">
+                                    <input type="phone" class="form-control" name="phone" placeholder="Mobile No.">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password1" placeholder="Password">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="password" class="form-control" id="password" placeholder="Confirm Password">
+                                    <input type="password" class="form-control" name="password2" placeholder="Confirm Password">
                                 </div>
                                  <div class="col-12 col-md-6">
-                                    <select name="gender" id="" class="form-control">
+                                    <select name="gender" value="gender" class="form-control">
                                         <option value="">Gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -143,8 +129,8 @@
                                 </div>
 
                                 
-                                <button class="btn mosh-btn mt-50" type="submit">Register</button> &nbsp;
-                                 <button class="btn mosh-btn mt-50" type="submit" >Forgot Password</button>
+                                <button class="btn mosh-btn mt-50" type="submit" name="reg_user">Register</button> &nbsp;
+                                 <button class="btn mosh-btn mt-50" type="submit"  >Cancel</button>
                                
                             </div>
                         </form>

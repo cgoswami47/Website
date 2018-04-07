@@ -3,12 +3,20 @@
 
   if (!isset($_SESSION['email'])) {
   	$_SESSION['msg'] = "You must log in first";
+<<<<<<< HEAD
   	header('location: login.html');
+=======
+  	header('location: login.php');
+>>>>>>> 1d139c9591dea11af23fcf73f5e6b3058bd60fce
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['email']);
+<<<<<<< HEAD
   	header("location: login.html");
+=======
+  	header("location: login.php");
+>>>>>>> 1d139c9591dea11af23fcf73f5e6b3058bd60fce
   }
 ?>
 <!DOCTYPE html>
@@ -36,7 +44,11 @@
   	<?php endif ?>
 
     <!-- logged in user information -->
+<<<<<<< HEAD
     <?php  if (isset($_SESSION['email'])) : ?>
+=======
+    <?php  if (isset($_SESSION['username'])) : ?>
+>>>>>>> 1d139c9591dea11af23fcf73f5e6b3058bd60fce
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>

@@ -1,7 +1,7 @@
 <?php 
-error_reporting(0);
+//error_reporting(0);
 //if($_POST['submit']=='Send')
-if(isset($_SESSION['forgot']))
+if(isset($_POST['forgot_pass']))
 {
 //keep it inside
 $email=$_POST['email'];
@@ -19,14 +19,15 @@ or die(mysqli_error($con));
  {
 $code=rand(100,999);
 $message="You activation link is: http://crazyprofitbazaar.com/resetpass.php?email=$email&code=$code";
-mail($email, "crazyprofitbazaar", $message);
+$done =mail($email, "crazyprofitbazaar", $message);
+$done = $done or die($done);
 echo 'Email sent<br>';
 $query2 = mysqli_query($con,"update users set activation_code='$code' where email='$email' ")
 or die(mysqli_error($con)); 
 }
 else
 {
-echo 'No user exist with this email id';
+echo 'No user exist with this email id\n';
 
 }}
 

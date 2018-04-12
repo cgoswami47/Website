@@ -4,13 +4,13 @@ if(isset($_POST['pass'])){
 $pass = $_POST['pass'];
 $acode=$_POST['code'];
 
-$con=mysqli_connect("127.0.0.1","root","","registration");
+$con=mysqli_connect("localhost","chandu","Goswami@1997","crazy");
 // Check connection
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-$query = mysqli_query($con,"select * from login where activation_code='$acode'")
+$query = mysqli_query($con,"select * from users where activation_code='$acode'")
 or die(mysqli_error($con)); 
 
 if (mysqli_num_rows ($query)==1) 

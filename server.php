@@ -14,12 +14,17 @@ if (!$db) {
 }
 
 if (isset($_POST['forgot_pass'])) {
+	  /*
+	  $email = mysqli_real_escape_string($db, $_POST['email']);
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (count($errors) == 0) {
+  */
     $_SESSION['forgot'] = true; 
-    header('location:forgot.html')
-  }
-
+    header('location:forgot.html');
+  //}
+	//else
+	//echo "Error in opening\n";
+}
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form

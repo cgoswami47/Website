@@ -20,11 +20,17 @@ if (isset($_POST['forgot_pass'])) {
   if (count($errors) == 0) {
   */
     $_SESSION['forgot'] = true; 
+<<<<<<< HEAD
     header('location:forgot.html');
   //}
 	//else
 	//echo "Error in opening\n";
 }
+=======
+    header('location:forgot.html')
+  }
+
+>>>>>>> e59ed60ec9ff8042fe1f2af0a6440f162f37e7d5
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form

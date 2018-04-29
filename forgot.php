@@ -1,13 +1,6 @@
 <?php 
-<<<<<<< HEAD
-//error_reporting(0);
-//if($_POST['submit']=='Send')
-if(isset($_POST['forgot_pass']))
-=======
 error_reporting(0);
-//if($_POST['submit']=='Send')
-if(isset($_SESSION['forgot']))
->>>>>>> e59ed60ec9ff8042fe1f2af0a6440f162f37e7d5
+if($_POST['submit']=='Send')
 {
 //keep it inside
 $email=$_POST['email'];
@@ -25,26 +18,38 @@ or die(mysqli_error($con));
  {
 $code=rand(100,999);
 $message="You activation link is: http://crazyprofitbazaar.com/resetpass.php?email=$email&code=$code";
-<<<<<<< HEAD
-$done =mail($email, "crazyprofitbazaar", $message);
-$done = $done or die($done);
-=======
-mail($email, "crazyprofitbazaar", $message);
->>>>>>> e59ed60ec9ff8042fe1f2af0a6440f162f37e7d5
+$to = $email;
+ }
+function send_mail($email, $recipient_name, $message='Password reset link')
+{
+    require("phpmailer.php");
+
+    $mail = new PHPMailer();
+
+    $mail->CharSet="utf-8";
+    $mail->IsSMTP();                                      // set mailer to use SMTP
+    $mail->Host = "webmailer.crazyprofitbazaar.com";  // specify main and backup server
+    $mail->SMTPAuth = true;     // turn on SMTP authentication
+    $mail->Username = "recovery@crazyprofitbazaar.com";  // SMTP username
+    $mail->Password = "Goswami@1997"; // SMTP password
+
+    $mail->From = "recovery@crazyprofitbazaar.com";
+    $mail->FromName = "Chandrashekhar Goswami";
+    $mail->AddAddress($email, $recipient_name);
+
+    $mail->WordWrap = 50;                                 // set word wrap to 50 characters
+    $mail->IsHTML(true);                                  // set email format to HTML (true) or plain text (false)
+
+    $mail->Subject = "Password reset link";
+
+//mail($to,$subject,$message,$headers);
 echo 'Email sent<br>';
 $query2 = mysqli_query($con,"update users set activation_code='$code' where email='$email' ")
 or die(mysqli_error($con)); 
 }
-else
 {
-echo 'No user exist with this email id\n';
+echo 'No user exist with this email id';
 
-}}
+};
 
 ?>
-<!--
-<form action="forgot.php" method="post">
-Enter you email ID: <input type="text" name="email">
-<input type="submit" name="sut" value="Send">
-</form>
--->
